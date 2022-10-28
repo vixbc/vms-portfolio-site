@@ -3,7 +3,7 @@
 }
 
 :root{
-  --accent: #5a5df1;
+  --accent: #63ebf5;
   --accent-text: #333
 }
 body {
@@ -29,16 +29,40 @@ p {
   margin: 0;
 }
 
+/* main content */
+
+.page-wrapper{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: var(--accent);
+  grid-template-rows:100% ;
+  grid-template-areas: "header text";
+}
+
+.page-wrapper > section{
+  grid-area: "header";
+  color: var(--accent-text);
+
+}
+
+main p{
+  grid-area: "text";
+}
+
 /* hero */
-.hero-banner {
-  background-image: linear-gradient(rgba(30, 75, 112, 0.5), rgba(68, 71, 201, 0.5)), url("../images/02-hero-bg.jpg");
+/* .hero-banner {
+  background-image: linear-gradient(rgba(66, 145, 209, 0.5), rgba(68, 181, 201, 0.5)), url("../images/02-hero-bg.jpg");
   height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
+} */
 
+.hero-banner hero{
+  background-image: url("../images/profile\ picture.jpg");
+  position: absoltute;
+}
 
 .hero-banner div{
   position:relative;
@@ -86,6 +110,6 @@ nav a:hover {
 }
 
 nav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: var(--accent);
+  color: var(--accent-text);
 }
