@@ -2,14 +2,17 @@
   box-sizing: border-box;
 }
 
+:root{
+  --accent: #04AA6D;
+  --accent-bck: #444
+}
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    line-height: 1.5;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -20,4 +23,42 @@ h6 {
 
 p {
   margin: 0;
+}
+
+/* hero */
+
+/* Navigation styling */
+nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+header h1{
+  margin: 5px;
+  display: inline-block;
+  color: var(--accent);
+  background-color: var(--accent-bck);
+
+}
+
+nav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: var(--accent);
+  text-decoration: underline #ffffff;
+  
+}
+
+nav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
