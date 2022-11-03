@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+:root{
+  --accent: #63f5e2;
+  --accent-text: rgb(42, 48, 48);
+  --page-bck: white;
+  --highlight: white;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    line-height: 1.5;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--accent-text);
+}
+
+p {
+  margin: 0;
+}
+
+/* main content */
+
+.page-section{
+  display: grid;
+  flex: auto;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: 
+  "header text";
+
+}
+
+.sec-header{
+  border-right: var(--accent-text);
+  border-width: 3px;
+  text-align: right;
+  font-size: x-large;
+  padding: 15px;
+}
+
+#about img {
+  height: 200px;
+  background-color: var(--accent);
+  border: 5px solid var(--accent);
+  border-width: 2px;
+  border-radius: 21px;
+}
+
+
+#workGrid {
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "hero hero"
+  "workOne workTwo"
+  "workThree workFour"
+  ;
+}
+
+.workGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 5px solid var(--accent);
+  margin: 5px;
+  display: grid;
+  align-content: end;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.workGridArea h2, .workGridArea p {
+  background-color: var(--accent);
+  padding: 5px;
+  color: var(--accent-text);
+}
+
+.workGridArea:hover {
+  opacity: 1;  
+}
+
+#workHero {
+  grid-area: hero;
+  background-image: url("../images/02-portfolio-4.jpg");
+
+}
+#workOne {
+  grid-area: workOne;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#workTwo {
+  grid-area: workTwo;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#workThree {
+  grid-area: workThree;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#workFour {
+  grid-area: workFour;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+#contactAreaGrid a {
+  display: inline;
+  padding: 5px;
+  font-weight: 900;
+  font-size: 17;
+}
+
+/* hero */
+.hero-banner {
+  background-image: linear-gradient(rgba(66, 145, 209, 0.5), rgba(68, 181, 201, 0.5)), url("../images/02-hero-bg.jpg");
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-banner div{
+  position:relative;
+  padding-top: 7%;
+  padding-left: 80%;
+
+}
+
+.hero-banner h2 {
+  display: inline-block;
+  padding: 3px;
+  color: var(--accent-text);
+  background-color: var(--accent);
+}
+
+
+/* Navigation styling */
+nav {
+  overflow: auto;
+  background-color:var(--accent-text);
+}
+
+header h1{
+  /* margin-top: 1%; */
+  padding-left: 3%;
+  padding-right: 0.5% ;
+  display: inline;
+  color: var(--accent-text);
+  background-color:var(--accent);
+  font-size: 30px;
+}
+
+nav a {
+  display: block;
+  float: right;
+  color: var(--highlight);
+  text-align: center;
+  padding: 2% 1%;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  text-decoration: underline var(--highlight);
+  
+}
+
+nav a.active {
+  background-color: var(--accent);
+  color: var(--accent-text);
+}
